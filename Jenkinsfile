@@ -14,11 +14,11 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn --version'
+                sh 'cd /var/lib/jenkins/workspace/ewebsite'
+                sh 'ls -lrt'
                 sh 'ls -lrt'
                 sh 'ls -l'
-                sh 'ls -l target'
-                sh 'cd /var/lib/jenkins/workspace/ewebsite'
-                ls '-lrt'
+               
                 //sh 'mvn clean package'
                 
                 
