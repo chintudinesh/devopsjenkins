@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh 'mvn --version'
                 sh 'ls -lrt'
                 sh 'ls -l'
                 sh 'ls -l target'
