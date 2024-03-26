@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-        stage('Build') {
+        /*stage('Build') {
             steps {
               //  sh 'gulp build' // Assuming you're using Gulp for your HTML project
             }
@@ -13,7 +13,7 @@ pipeline {
               //  sh 'npm test' // Execute your HTML/CSS/JavaScript tests here
             }
         }
-        
+        */
         stage('Deploy') {
             steps {
                 // Example deployment script using rsync
