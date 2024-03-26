@@ -20,7 +20,7 @@ pipeline {
                 script {
                     // Copy files to remote server using rsync
                     sh '''
-                    rsync -avz -e "ssh -i 172.31.1.43" S:\devops ubuntu@52.91.221.228:/path/to/destination/directory
+                    rsync -avz -e "ssh -i 192.168.254.29" S:\devops ubuntu@52.91.221.228:/path/to/destination/directory
                     '''
                 }
             }
