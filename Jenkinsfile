@@ -10,19 +10,15 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'docker build -t my-web-app .'
+               
             }
         }
         
-        stage('Test') {
-            steps {
-                // Add your test commands here
-            }
-        }
+       
         
         stage('Deploy') {
             steps {
-                sh 'docker run -d -p 8080:80 my-web-app'
+                sh 'cp -r ./* /path/to/your/webserver/root'
             }
         }
     }
