@@ -17,9 +17,10 @@ pipeline {
                 sh 'ls -lrt'
                 sh 'ls -l'
                 sh 'ls -l target'
-                sh 'mvn clean package'
                 sh 'cd /var/lib/jenkins/workspace/ewebsite'
                 ls '-lrt'
+                //sh 'mvn clean package'
+                
                 
             }
         }
