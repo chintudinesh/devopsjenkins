@@ -13,14 +13,17 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh 'ls -lrt'
+                sh 'ls -l'
+                sh 'ls -l target'
                 sh 'mvn clean package'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
-        }
+        //stage('Test') {
+          //  steps {
+            //    sh 'mvn test'
+            //}
+       // }
      //   stage('Deploy') {
        //     steps {
                 //sh scp -i devops-key.pem your-artifact.jar ubuntu@your-ec2-instance:/path/to/destination
