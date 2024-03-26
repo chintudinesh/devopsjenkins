@@ -23,19 +23,19 @@ pipeline {
                 
             }
         }
-        //stage('Test') {
-          //  steps {
-            //    sh 'mvn test'
-            //}
-       // }
-     //   stage('Deploy') {
-       //     steps {
+        stage('Test') {
+          steps {
+              sh 'mvn test'
+           }
+       }
+        stage('Deploy') {
+          steps {
                 //sh scp -i devops-key.pem your-artifact.jar ubuntu@your-ec2-instance:/path/to/destination
-         //       sh scp -i devops_key.pem your-artifact.jar ubuntu@52.91.221.228:/home/ubuntu
+            sh scp -i devops_key.pem your-artifact.jar ubuntu@52.91.221.228:/home/ubuntu
                 //sh ssh -i devops-key.pem ubuntu@52.91.221.228 'java -jar /path/to/your-artifact.jar'
-           //     sh ssh -i devops_key.pem ubuntu@52.91.221.228 'java -jar /home/ubuntu/your-artifact.jar'
+          sh ssh -i devops_key.pem ubuntu@52.91.221.228 'java -jar /home/ubuntu/your-artifact.jar'
                 
             //}
         //}
-    }
+    }}}
 }
