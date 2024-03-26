@@ -6,7 +6,7 @@ pipeline {
                 script {
                     checkout([$class: 'GitSCM', 
                         branches: [[name: 'main']],
-                        userRemoteConfigs: [[url: 'https://github.com/chintudinesh/web.git',
+                        userRemoteConfigs: [[url:'https://github.com/chintudinesh/devopsjenkins.git',
                                              credentialsId: 'github-token']]])
                 }
             }
